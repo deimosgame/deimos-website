@@ -19,3 +19,5 @@ Route::get('/', array('as' => 'home', 'uses' => function()
 Route::controller('/login', 'LoginController');
 Route::controller('/logout', 'LogoutController');
 Route::controller('/register', 'RegisterController');
+
+Route::controller('/gamefeed', 'GameFeedController');

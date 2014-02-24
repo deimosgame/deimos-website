@@ -5,26 +5,25 @@
 @endsection
 
 @section('content')
-	<div class="gamefeed">
+    <div class="gamefeed">
         <div class="playershare">
             <div class="content">
-                <div class="raw">
-                    {{ Form::open(array('action' => 'GameFeedController@postSubmit', 'autocomplete' => 'off')) }}
-                    <div class="large-12 columns">
-                        {{ Form::text('content', null, array('class' => 'large-12 columns', 'placeholder' => 'Share your thoughts!')) }}
-                        <span class="left">Please respect other players and stay polite.</span>
-                        <div class="right">
-                            @if(Auth::check())
-                            {{ Form::submit('Share', array('class' => 'tiny button')) }}
-                            @else
-                            <span><a href="{{{ URL::action('LoginController@getIndex') }}}" style="">Login</a></span>
-                            @endif
-                        </div>
-                        <div class="clear"></div>
+                {{ Form::open(array('action' => 'GameFeedController@postSubmit', 'autocomplete' => 'off')) }}
+                <div class="large-12 columns">
+                    {{ Form::text('content', null, array('placeholder' => 'Share your thoughts!')) }}
+                    <br />
+                    <span class="left">Please respect other players and stay polite.</span>
+                    <div class="right">
+                        @if(Auth::check())
+                        {{ Form::submit('Share', array('class' => 'tiny button')) }}
+                        @else
+                        <span><a href="{{{ URL::action('LoginController@getIndex') }}}" style="">Login</a></span>
+                        @endif
                     </div>
                     <div class="clear"></div>
-                    {{ Form::close() }}
                 </div>
+                <div class="clear"></div>
+                {{ Form::close() }}
             </div>
         </div>
         @foreach($gamefeed as $feed)

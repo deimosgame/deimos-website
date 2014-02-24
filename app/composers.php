@@ -13,7 +13,7 @@ View::composer('*', function($view)
 
 View::composer('partials.news-widget', function($view)
 {
-    $view->with('news', News::orderBy('id', 'DESC')->limit(2)->get());
+    $view->with('news', News::orderBy('id', 'DESC')->take(2)->get());
 });
 
 View::composer('partials.menu', function($view)
@@ -29,4 +29,16 @@ View::composer('partials.menu', function($view)
     	}
     }
     $view->with('menuSubItem', MenuSubItem::where('menu_id', '=', $currentItem));
+});
+
+
+
+View::composer('gamefeed.index', function($view)
+{
+    $gamefeed = GameFeed::orderBy('gamefeed.id', 'DESC')->take(10)
+        ->join('users', 'users.id', '=', 'gamefeed.user_id')
+        ->select('gamefeed.id', 'gamefeed.event_id', 'gamefeed.content', 
+            'gamefeed.created_at', 'users.username', 'users.email_md5')
+        ->get();
+    $view->with('gamefeed', $gamefeed);
 });
