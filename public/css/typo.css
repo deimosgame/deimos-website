@@ -1,0 +1,65 @@
+/* line 4, ../scss/typo.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato";
+}
+
+/* line 9, ../scss/typo.scss */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+/* line 14, ../scss/typo.scss */
+h1 .content {
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  width: 300px;
+}
+/* line 22, ../scss/typo.scss */
+h1 .border {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 1px;
+  width: 300px;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+/* line 37, ../scss/typo.scss */
+h4 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.1em;
+}
+/* line 42, ../scss/typo.scss */
+h4 span {
+  background: #1e2128;
+}
+
+/* line 48, ../scss/typo.scss */
+span {
+  color: #d8d8d8;
+}
+
+/* line 53, ../scss/typo.scss */
+a {
+  color: #f7f7f7;
+}
+/* line 56, ../scss/typo.scss */
+a:hover {
+  color: #d8d8d8;
+}
+
+/* line 62, ../scss/typo.scss */
+.small-text {
+  font-size: 0.8em;
+}
+
+/* line 66, ../scss/typo.scss */
+.darker {
+  color: #c9c9c9;
+}

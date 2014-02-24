@@ -1,0 +1,68 @@
+@import "compass/css3";
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: "Lato";
+}
+
+h1
+{
+	margin-top: 20px; margin-bottom: 40px;
+	font-size: 2em;
+
+	.content
+	{
+		padding: 10px;
+		color: white;
+		background: rgba(0, 0, 0, 0.8);
+		width: 300px;
+	}
+
+	.border
+	{
+		padding-left: 10px; padding-right: 10px;
+		height: 1px;
+		width: 300px;
+		@include background-image(
+	    	linear-gradient(
+	    		left, 
+	    		rgba(255, 255, 255, 1),
+	    		rgba(255, 255, 255, 0)
+	    	)
+	   	);
+	}
+}
+
+h4
+{	text-transform: uppercase;
+	color: white;
+	font-size: 1.1em;
+
+	span
+	{
+		background: #1e2128;
+	}
+}
+
+span
+{
+	color: #d8d8d8;
+}
+
+a
+{
+	color: #f7f7f7;
+	&:hover
+	{
+		color: #d8d8d8;
+	}
+}
+
+.small-text
+{
+	font-size: 0.8em;
+}
+.darker
+{
+	color: #c9c9c9;
+}

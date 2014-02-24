@@ -1,0 +1,82 @@
+@import "compass/css3";
+@import "foundation";
+
+table.custom
+{
+	margin-top: -1px;
+	// Reset
+	&, thead, tbody, tr, td, th
+	{
+		background: none;
+	}
+
+	// Let's customize it
+	th, td
+	{
+		background: rgba(21,23,29,0.95);
+		color: #737578;
+		font-family: "Lato";
+		text-align: center;
+	}
+	th span
+	{
+		background: #1e2128;
+		padding: 1px 5px 1px 5px;
+	}
+	tr:hover td
+	{
+		background: rgba(238,235,232,0.95);
+		color: #20201f;
+	}
+	td
+	{
+		padding: 25px;
+	}
+}
+
+
+input[type=text], input[type=password]
+{
+	background: rgba(0, 0, 0, 0.9);
+	border: 1px solid #6f6f6f;
+	color: white;
+	font-family: "Lato";
+	margin: 0;
+
+	&:hover, &:focus
+	{
+		background: rgba(0, 0, 0, 0.9);
+	}
+}
+input[type=submit], a.button, button
+{
+	background: rgba(0, 0, 0, 0.9)!important;
+	border: 1px solid #6f6f6f!important;
+	color: white!important;
+	font-family: "Lato";
+	margin: 0;
+}
+
+.split-button {
+  	@include split-button();
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+	&:hover
+	{
+		color: #dcdcdc;
+	}
+}
+
+.alert-box
+{
+	opacity: 0.75;
+	&.error
+	{
+		background: #ff0505;
+		border: none;
+	}
+}

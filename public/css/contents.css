@@ -1,0 +1,40 @@
+/* line 6, ../scss/contents.scss */
+.gamefeed .playershare span {
+  height: 36px;
+  line-height: 36px;
+  vertical-align: middle;
+  color: #bfbfbf;
+  font-size: 0.8em;
+}
+/* line 13, ../scss/contents.scss */
+.gamefeed .content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #d5d5d5;
+}
+/* line 19, ../scss/contents.scss */
+.gamefeed .content .infos {
+  padding-left: 10px;
+  color: #a6a7a7;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+/* line 29, ../scss/contents.scss */
+.main-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  padding-top: 0px;
+}
+/* line 34, ../scss/contents.scss */
+.main-content .title {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 37, ../scss/contents.scss */
+.main-content .title h4 {
+  padding: 5px;
+  padding-left: 15px;
+  margin: 0;
+  margin-bottom: 15px;
+}

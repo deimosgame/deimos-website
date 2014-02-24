@@ -1,0 +1,122 @@
+@import "compass/css3";
+
+body
+{
+	background-image: url("../images/background2.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Lato";
+}
+.clear
+{
+	clear: both;
+}
+
+header 
+{
+    @include background-image(
+    	linear-gradient(
+    		left, 
+    		rgba(0, 0, 0, 0.6), 
+    		rgba(0, 0, 0, 0.9), 
+    		rgba(0, 0, 0, 0.6)
+    	)
+   	);
+    margin-top: 55px; margin-bottom: 0px;
+    text-align: center;
+
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+nav ul
+{
+	margin: 0;
+	li
+	{
+		text-align: center;
+		background: rgba(0, 0, 0, 0.8);
+		border: 1px solid #333e4a;
+		cursor: pointer;
+		a
+		{
+			color: white;
+			text-transform: uppercase;
+			font-family: "Lato";
+			font-size: 1.4em;
+			font-weight: 300;
+		}
+
+		&:hover, &.selected
+		{
+			background: #ebe8e3;
+			a {
+				color: #20201f;
+			}
+		}
+	}
+}
+
+.wrapper
+{
+	margin-top: 20px;
+}
+
+#sidebar
+{
+	@include background-image(
+    	linear-gradient(
+    		left, 
+    		rgba(0, 0, 0, 0.9), 
+    		rgba(0, 0, 0, 0.6)
+    	)
+   	);
+
+   	.title
+   	{
+		background: rgba(0, 0, 0, 0.8);
+   		h4
+   		{
+			padding: 5px;
+			padding-left: 15px;
+			margin: 0;
+   		}
+   	}
+   	.content
+   	{
+   		color: #c5c5c6;
+   		font-family: "Lato";
+   		border-top: 1px solid rgba(255, 255, 255, 0.2);
+   		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   		font-size: 0.8em;
+   		padding: 10px;
+   		padding-top: 20px; padding-bottom: 20px;
+   		margin-top: -1px;
+
+   		.infos
+   		{
+			padding-left: 10px;
+			color: #a6a7a7;
+			font-size: 0.8em;
+			margin-top: 5px;
+   		}
+
+   		&:hover
+   		{
+   			@include background-image(
+		    	linear-gradient(
+		    		left, 
+		    		rgba(235, 232, 227, 1), 
+		    		rgba(235, 232, 227, 0.9)
+		    	)
+		   	);
+		   	color: #20201f;
+
+		   	.infos
+		   	{
+		   		color: #303030;
+		   	}
+   		}
+   	}
+}
