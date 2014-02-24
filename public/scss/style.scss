@@ -23,11 +23,18 @@ header
     	)
    	);
     margin-top: 55px; margin-bottom: 0px;
-    text-align: center;
 
     width: 1100px;
     margin: 0 auto;
     margin-top: 60px;
+
+    #header-logo
+    {
+		background-image: url('../images/logo.png');
+		height: 72px;
+		width: 78px;
+		margin: 0 auto;
+    }
 }
 
 nav ul
@@ -39,21 +46,16 @@ nav ul
 		background: rgba(0, 0, 0, 0.8);
 		border: 1px solid #333e4a;
 		cursor: pointer;
-		a
-		{
-			color: white;
-			text-transform: uppercase;
-			font-family: "Lato";
-			font-size: 1.4em;
-			font-weight: 300;
-		}
+		color: white;
+		text-transform: uppercase;
+		font-family: "Lato";
+		font-size: 1.4em;
+		font-weight: 300;
 
 		&:hover, &.selected
 		{
 			background: #ebe8e3;
-			a {
-				color: #20201f;
-			}
+			color: #20201f;
 		}
 	}
 }

@@ -3,11 +3,13 @@
         <h4>Latest news</h4>
     </div>
     @foreach($news as $thisNews)
-    <div class="content">
-        {{{ $thisNews->title }}}
-        <div class="infos">
-            {{{ $thisNews->created_at }}}
+    <a href="#">
+        <div class="content">
+            {{{ $thisNews->title }}}
+            <div class="infos">
+                {{{ $thisNews->created_at }}}
+            </div>
         </div>
-    </div>
+    </a>
     @endforeach
 </div>

@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/Deimos/website/public',
+	'url' => 'http://localhost/Deimos/website/public/',
 
 	/*
 	|--------------------------------------------------------------------------

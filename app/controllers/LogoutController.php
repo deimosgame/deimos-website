@@ -6,7 +6,7 @@ class LogoutController extends BaseController
 	public function getIndex()
 	{
 		Auth::logout();
-		return Redirect::action('HomeController@getIndex')
+		return Redirect::home()
 			->with('message', 'You have successfully been logged out!');
 	}
 

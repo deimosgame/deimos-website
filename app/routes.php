@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', array('as' => 'home'));
+Route::get('/', array('as' => 'home', 'uses' => function()
+{
+	return View::make('home.index');
+}));
 
-Route::controller('/', 'HomeController');
 Route::controller('/login', 'LoginController');
 Route::controller('/logout', 'LogoutController');
 Route::controller('/register', 'RegisterController');

@@ -16,7 +16,7 @@ class LoginController extends BaseController
 		));
 		if(!$attempt)
 		{
-			return Redirect::action('HomeController@getLogin')
+			return Redirect::action('LoginController@getIndex')
 				->with('message', 'Wrong username/password. Please try again!')
 				->withInput();
 		}

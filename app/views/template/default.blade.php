@@ -6,12 +6,11 @@
         <title>Deimos Portal - @yield('pageName')</title>
         {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300") }}
         {{ HTML::style("css/app.css") }}
-        <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
 
         <header>
-            <img src="images/logo.png" id="logo">
+            <a href="{{ URL::to('/') }}"><div id="header-logo"></div></a>
         </header>
 
         <div class="row">
@@ -63,6 +62,7 @@
             </div>
         </div>
 
+        {{ HTML::script("bower_components/modernizr/modernizr.js") }}
         {{ HTML::script("bower_components/jquery/jquery.js") }}
         {{ HTML::script("bower_components/foundation/js/foundation.min.js") }}
         {{ HTML::script("js/app.js") }}
