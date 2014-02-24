@@ -16,6 +16,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$user 		    = new User;
 	   	$user->username = $username;
 	   	$user->email    = $email;
+	   	$user->email_md5 = md5($email);
 	   	$user->password = Hash::make($password);
 	   	$user->save();
 

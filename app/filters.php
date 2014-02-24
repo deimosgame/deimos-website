@@ -78,3 +78,11 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Route::when('login', 'guest');
+Route::when('login/*', 'guest');
+Route::when('register', 'guest');
+Route::when('register/*', 'guest');
+Route::when('gamefeed/submit', 'auth');
+Route::when('gamefeed/submit/*', 'auth');
