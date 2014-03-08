@@ -32,16 +32,16 @@ View::composer('partials.menu', function($view)
 
 View::composer('news.index', function($view)
 {
-	$view->with('news', News::orderBy('id', 'DESC')->take(10)->get());
+	$view->with('news', News::orderBy('id', 'DESC')->paginate(1));
 	View::share('hideNewsWidget', true);
 });
 
 View::composer('gamefeed.index', function($view)
 {
-    $gamefeed = GameFeed::orderBy('gamefeed.id', 'DESC')->take(10)
+    $gamefeed = GameFeed::orderBy('gamefeed.id', 'DESC')
         ->join('users', 'users.id', '=', 'gamefeed.user_id')
         ->select('gamefeed.id', 'gamefeed.event_id', 'gamefeed.content', 
             'gamefeed.created_at', 'users.username', 'users.email_md5')
-        ->get();
+        ->paginate(10);
     $view->with('gamefeed', $gamefeed);
 });
