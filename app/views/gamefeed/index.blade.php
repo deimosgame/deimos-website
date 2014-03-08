@@ -36,7 +36,7 @@
                     {{{ $feed->content}}}
                     <div class="infos">
                         {{{ $feed->username }}} - 
-                        {{{ $feed->created_at }}}
+                        {{{ $feed->created_at->diffForHumans() }}}
                     </div>
                 </div>
                 <div class="clear"></div>

@@ -26,7 +26,7 @@
                     <ul id="drop" class="f-dropdown" data-dropdown-content>
                         @if(Auth::check())
                         <li><a href="#">See my profile</a></li>
-                        <li><a href="{{ URL::action('LogoutController@getIndex') }}">Logout</a></li>
+                        <li><a href="{{ URL::action('LogoutController@getIndex') }}?_token={{ csrf_token() }}">Logout</a></li>
                         @else
                         <li><a href="{{ URL::action('LoginController@getIndex') }}">Login</a></li>
                         <li><a href="{{ URL::action('RegisterController@getIndex') }}">Register</a></li>
@@ -51,6 +51,7 @@
             @include('partials.menu')
         </div>
 
+		@if(!isset($hideNewsWidget))
         <div class="row wrapper">
             <div class="large-8 columns">
                 <div class="main-content">
@@ -61,6 +62,15 @@
                 @include('partials.news-widget')
             </div>
         </div>
+        @else
+		<div class="row wrapper">
+            <div class="large-12 columns">
+                <div class="main-content">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+        @endif
 
         {{ HTML::script("bower_components/modernizr/modernizr.js") }}
         {{ HTML::script("bower_components/jquery/jquery.js") }}

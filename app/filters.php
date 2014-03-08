@@ -75,7 +75,8 @@ Route::filter('csrf', function()
 {
 	if (Session::token() != Input::get('_token'))
 	{
-		throw new Illuminate\Session\TokenMismatchException;
+		//throw new Illuminate\Session\TokenMismatchException;
+		die('Invalid CSRF.');
 	}
 });
 
@@ -84,5 +85,12 @@ Route::when('login', 'guest');
 Route::when('login/*', 'guest');
 Route::when('register', 'guest');
 Route::when('register/*', 'guest');
+
 Route::when('gamefeed/submit', 'auth');
 Route::when('gamefeed/submit/*', 'auth');
+
+Route::when('login/*', 'csrf', array('post'));
+Route::when('logout', 'csrf');
+Route::when('logout/*', 'csrf');
+Route::when('register/*', 'csrf', array('post'));
+Route::when('gamefeed/submit/*', 'csrf', array('post'));

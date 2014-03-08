@@ -1,14 +1,12 @@
 <?php
 
-// Convert the session message into a real variable
 View::composer('*', function($view)
 {
+	// Convert the session message into a real variable
     if(!empty(Session::get('message')))
     {
         return $view->with('message', Session::get('message'));
     }
-
-    return $view;
 });
 
 View::composer('partials.news-widget', function($view)
@@ -32,6 +30,11 @@ View::composer('partials.menu', function($view)
 });
 
 
+View::composer('news.index', function($view)
+{
+	$view->with('news', News::orderBy('id', 'DESC')->take(10)->get());
+	View::share('hideNewsWidget', true);
+});
 
 View::composer('gamefeed.index', function($view)
 {

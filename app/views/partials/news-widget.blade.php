@@ -7,7 +7,7 @@
         <div class="content">
             {{{ $thisNews->title }}}
             <div class="infos">
-                {{{ $thisNews->created_at }}}
+                {{{ $thisNews->created_at->diffForHumans() }}}
             </div>
         </div>
     </a>

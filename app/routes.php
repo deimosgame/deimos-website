@@ -20,4 +20,5 @@ Route::controller('/login', 'LoginController');
 Route::controller('/logout', 'LogoutController');
 Route::controller('/register', 'RegisterController');
 
+Route::controller('/news', 'NewsController');
 Route::controller('/gamefeed', 'GameFeedController');

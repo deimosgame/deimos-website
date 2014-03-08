@@ -1,5 +1,20 @@
 @import "compass/css3";
 
+.content
+{
+    color: #d5d5d5;
+    line-height: 1.5em;
+}
+.less-important
+{
+    color: #a6a7a7;
+}
+
+.margin-top
+{
+    height: 15px;
+}
+
 .gamefeed
 {
 	.playershare span
@@ -13,7 +28,6 @@
 	{
 		padding-top: 15px; padding-bottom: 15px;
    		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-   		color: #d5d5d5;
 
    		.infos
    		{
