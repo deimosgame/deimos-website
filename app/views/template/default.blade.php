@@ -72,9 +72,11 @@
         </div>
         @endif
 
-        {{ HTML::script("bower_components/modernizr/modernizr.js") }}
-        {{ HTML::script("bower_components/jquery/jquery.js") }}
-        {{ HTML::script("bower_components/foundation/js/foundation.min.js") }}
+        {{ HTML::script("bower_components/modernizr/modernizr.js", array('data-no-instant')) }}
+        {{ HTML::script("bower_components/jquery/jquery.js", array('data-no-instant')) }}
+        {{ HTML::script("bower_components/foundation/js/foundation.min.js", array('data-no-instant')) }}
+        {{ HTML::script("js/instantclick.min.js", array('data-no-instant')) }}
         {{ HTML::script("js/app.js") }}
+		<script data-no-instant>InstantClick.init();</script>
     </body>
 </html>

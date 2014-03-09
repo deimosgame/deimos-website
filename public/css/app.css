@@ -7729,17 +7729,19 @@ th.hide-for-touch {
 /* line 4, ../scss/style.scss */
 body {
   background-image: url("../images/background2.jpg");
-  background-position: center;
+  background-position: top center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000000;
   font-family: "Lato";
 }
 
-/* line 11, ../scss/style.scss */
+/* line 13, ../scss/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
 header {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0.6)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
@@ -7752,7 +7754,7 @@ header {
   margin: 0 auto;
   margin-top: 60px;
 }
-/* line 32, ../scss/style.scss */
+/* line 34, ../scss/style.scss */
 header #header-logo {
   background-image: url("../images/logo.png");
   height: 72px;
@@ -7760,11 +7762,11 @@ header #header-logo {
   margin: 0 auto;
 }
 
-/* line 41, ../scss/style.scss */
+/* line 43, ../scss/style.scss */
 nav ul {
   margin: 0;
 }
-/* line 44, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 nav ul li {
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
@@ -7776,18 +7778,18 @@ nav ul li {
   font-size: 1.4em;
   font-weight: 300;
 }
-/* line 56, ../scss/style.scss */
+/* line 58, ../scss/style.scss */
 nav ul li:hover, nav ul li.selected {
   background: #ebe8e3;
   color: #20201f;
 }
 
-/* line 64, ../scss/style.scss */
+/* line 66, ../scss/style.scss */
 .wrapper {
   margin-top: 20px;
 }
 
-/* line 69, ../scss/style.scss */
+/* line 71, ../scss/style.scss */
 #sidebar {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0.6)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
@@ -7795,17 +7797,17 @@ nav ul li:hover, nav ul li.selected {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
   background-image: linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
 }
-/* line 79, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 #sidebar .title {
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 82, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 #sidebar .title h4 {
   padding: 5px;
   padding-left: 15px;
   margin: 0;
 }
-/* line 89, ../scss/style.scss */
+/* line 91, ../scss/style.scss */
 #sidebar .content {
   color: #c5c5c6;
   font-family: "Lato";
@@ -7817,14 +7819,14 @@ nav ul li:hover, nav ul li.selected {
   padding-bottom: 20px;
   margin-top: -1px;
 }
-/* line 100, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 #sidebar .content .infos {
   padding-left: 10px;
   color: #a6a7a7;
   font-size: 0.8em;
   margin-top: 5px;
 }
-/* line 108, ../scss/style.scss */
+/* line 110, ../scss/style.scss */
 #sidebar .content:hover {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ebe8e3), color-stop(100%, rgba(235, 232, 227, 0.9)));
   background-image: -webkit-linear-gradient(left, #ebe8e3, rgba(235, 232, 227, 0.9));
@@ -7833,7 +7835,7 @@ nav ul li:hover, nav ul li.selected {
   background-image: linear-gradient(left, #ebe8e3, rgba(235, 232, 227, 0.9));
   color: #20201f;
 }
-/* line 119, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 #sidebar .content:hover .infos {
   color: #303030;
 }
