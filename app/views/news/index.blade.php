@@ -30,7 +30,7 @@
 		</div>
 
 		<div class="large-6 columns" style="padding: 0;">
-		    @foreach($news as $key => $thisNews)
+		    @foreach($news as $key => $thisNews) 
 		    @if($key % 2 == 0) <?php continue; ?> @endif
 		    <div class="news large-12 columns">
 		        <div class="title">
