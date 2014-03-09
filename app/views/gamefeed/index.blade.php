@@ -1,7 +1,7 @@
 @extends('template.default')
 
 @section('pageName')
-    Home
+    Gamefeed
 @endsection
 
 @section('content')

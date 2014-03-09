@@ -7840,6 +7840,11 @@ nav ul li:hover, nav ul li.selected {
   color: #303030;
 }
 
+/* line 128, ../scss/style.scss */
+#instantclick-bar {
+  background: #ffffff;
+}
+
 /* line 4, ../scss/typo.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";

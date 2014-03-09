@@ -111,3 +111,8 @@ nav ul li:hover, nav ul li.selected {
 #sidebar .content:hover .infos {
   color: #303030;
 }
+
+/* line 128, ../scss/style.scss */
+#instantclick-bar {
+  background: #ffffff;
+}
