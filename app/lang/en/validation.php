@@ -70,6 +70,7 @@ return array(
 	"url"              => "The :attribute format is invalid.",
 
 	"trim"             => "The :attribute is not formatted correctly. (too many spaces?)",
+	"alpha_num_spaces" => "The :attribute contains invalid characters.",
 
 	/*
 	|--------------------------------------------------------------------------
