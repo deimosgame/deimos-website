@@ -20,13 +20,13 @@ View::composer('partials.menu', function($view)
     $view->with('menuItem', $menuItems);
     $currentItem = 0;
     foreach ($menuItems as $value) {
-    	if(Request::is($value->link.'*'))
+    	if(Request::is($value->pattern))
     	{
     		$currentItem = $value->id;
     		break;
     	}
     }
-    $view->with('menuSubItem', MenuSubItem::where('menu_id', '=', $currentItem));
+    $view->with('menuSubItem', MenuSubItem::where('menu_id', '=', $currentItem)->get());
 });
 
 
