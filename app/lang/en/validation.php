@@ -69,6 +69,8 @@ return array(
 	"unique"           => "The :attribute has already been taken.",
 	"url"              => "The :attribute format is invalid.",
 
+	"trim"             => "The :attribute is not formatted correctly. (too many spaces?)",
+
 	/*
 	|--------------------------------------------------------------------------
 	| Custom Validation Language Lines
