@@ -5,31 +5,18 @@ h1, h2, h3, h4, h5, h6
 	font-family: "Lato";
 }
 
-h1
+h3
 {
 	margin-top: 20px; margin-bottom: 40px;
-	font-size: 2em;
+	font-size: 1.5em;
 
 	.content
 	{
 		padding: 10px;
+        padding-left: 15px; padding-right: 15px;
 		color: white;
 		background: rgba(0, 0, 0, 0.8);
-		width: 300px;
-	}
-
-	.border
-	{
-		padding-left: 10px; padding-right: 10px;
-		height: 1px;
-		width: 300px;
-		@include background-image(
-	    	linear-gradient(
-	    		left, 
-	    		rgba(255, 255, 255, 1),
-	    		rgba(255, 255, 255, 0)
-	    	)
-	   	);
+        display: inline-block;
 	}
 }
 

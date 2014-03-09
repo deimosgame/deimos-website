@@ -1,7 +1,7 @@
 @extends('template.default')
 
 @section('pageName')
-    Home
+    News
 @endsection
 
 @section('content')
@@ -11,17 +11,19 @@
 		    @if($key % 2 == 1) <?php continue; ?> @endif
 		    <div class="news large-12 columns">
 		        <div class="title">
-		            <h4>
-		                {{{ $thisNews->title }}}
-		            </h4>
-		            <div class="large-12 columns content">
-		                {{{ $thisNews->preview }}}
-		            </div>
-		            <div class="large-12 columns content">
-		                <span class="right less-important">
-		                    {{{ $thisNews->created_at->diffForHumans() }}}
-		                </span>
-		            </div>
+	    			<a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}">
+			            <h4>
+			                	{{{ $thisNews->title }}}
+			            </h4>
+	    			</a>
+		        </div>
+	            <div class="large-12 columns content">
+	                {{{ $thisNews->preview }}}
+	            </div>
+	            <div class="large-12 columns content">
+	                <span class="right less-important">
+	                    {{{ $thisNews->created_at->diffForHumans() }}}
+	                </span>
 		        </div>
 		    </div>
 		    <div class="clear"></div>
@@ -34,17 +36,19 @@
 		    @if($key % 2 == 0) <?php continue; ?> @endif
 		    <div class="news large-12 columns">
 		        <div class="title">
-		            <h4>
-		                {{{ $thisNews->title }}}
-		            </h4>
-		            <div class="large-12 columns content">
-		                {{{ $thisNews->preview }}}
-		            </div>
-		            <div class="large-12 columns content">
-		                <span class="right less-important">
-		                    {{{ $thisNews->created_at->diffForHumans() }}}
-		                </span>
-		            </div>
+	    			<a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}">
+			            <h4>
+			                	{{{ $thisNews->title }}}
+			            </h4>
+	    			</a>
+		        </div>
+	            <div class="large-12 columns content">
+	                {{{ $thisNews->preview }}}
+	            </div>
+	            <div class="large-12 columns content">
+	                <span class="right less-important">
+	                    {{{ $thisNews->created_at->diffForHumans() }}}
+	                </span>
 		        </div>
 		    </div>
 		    <div class="clear"></div>

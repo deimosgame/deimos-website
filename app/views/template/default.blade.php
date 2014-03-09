@@ -14,12 +14,11 @@
         </header>
 
         <div class="row">
-            <h1 class="large-8 columns">
+            <h3 class="large-8 columns">
                 <div class="content">
                     @yield('pageName')
                 </div>
-                <div class="border"></div>
-            </h1>
+            </h3>
             <div class="large-4 columns">
                 <div class="right" style="margin-top: 30px;">
                     <a href="#" class="split-button">Your profile <span data-dropdown="drop"></span></a><br>

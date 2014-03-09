@@ -3,7 +3,7 @@
         <h4>Latest news</h4>
     </div>
     @foreach($news as $thisNews)
-    <a href="#">
+    <a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}">
         <div class="content">
             {{{ $thisNews->title }}}
             <div class="infos">

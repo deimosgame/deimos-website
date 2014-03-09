@@ -86,19 +86,20 @@ nav ul li:hover, nav ul li.selected {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.8em;
-  padding: 10px;
+  padding: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: -1px;
+  line-height: 1.2em;
 }
-/* line 102, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 #sidebar .content .infos {
   padding-left: 10px;
   color: #a6a7a7;
   font-size: 0.8em;
   margin-top: 5px;
 }
-/* line 110, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 #sidebar .content:hover {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ebe8e3), color-stop(100%, rgba(235, 232, 227, 0.9)));
   background-image: -webkit-linear-gradient(left, #ebe8e3, rgba(235, 232, 227, 0.9));
@@ -107,12 +108,12 @@ nav ul li:hover, nav ul li.selected {
   background-image: linear-gradient(left, #ebe8e3, rgba(235, 232, 227, 0.9));
   color: #20201f;
 }
-/* line 121, ../scss/style.scss */
+/* line 122, ../scss/style.scss */
 #sidebar .content:hover .infos {
   color: #303030;
 }
 
-/* line 128, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 #instantclick-bar {
   background: #ffffff;
 }
