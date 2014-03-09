@@ -44,7 +44,8 @@ View::composer('gamefeed.index', function($view)
     $gamefeed = GameFeed::orderBy('gamefeed.id', 'DESC')
         ->join('users', 'users.id', '=', 'gamefeed.user_id')
         ->select('gamefeed.id', 'gamefeed.event_id', 'gamefeed.content', 
-            'gamefeed.created_at', 'users.username', 'users.email_md5')
-        ->paginate(10);
+            'gamefeed.created_at', 'users.username', 'users.email_md5',
+            'gamefeed.user_id')
+        ->limit((int)Input::get(''))->get();
     $view->with('gamefeed', $gamefeed);
 });

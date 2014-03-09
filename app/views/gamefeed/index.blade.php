@@ -30,7 +30,9 @@
         <div class="content">
             <div class="raw">
                 <div class="large-2 columns">
-                    <img src="//secure.gravatar.com/avatar/{{{ $feed->email_md5 }}}" alt="">
+	                <a href="{{ URL::action('UserController@getView', [$feed->user_id]) }}">
+	                    <img src="//secure.gravatar.com/avatar/{{{ $feed->email_md5 }}}" alt="">
+	                </a>
                 </div>
                 <div class="large-8 columns">
                     {{{ $feed->content}}}

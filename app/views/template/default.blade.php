@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Deimos Portal - @yield('pageName')</title>
-        {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300") }}
+        {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300, 500, 700") }}
         {{ HTML::style("css/app.css") }}
     </head>
     <body>
