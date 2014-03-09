@@ -14,7 +14,13 @@
   height: 15px;
 }
 
-/* line 21, ../scss/contents.scss */
+/* line 19, ../scss/contents.scss */
+.news {
+  font-size: 1.1em;
+  padding: 0;
+}
+
+/* line 27, ../scss/contents.scss */
 .gamefeed .playershare span {
   height: 36px;
   line-height: 36px;
@@ -22,13 +28,13 @@
   color: #bfbfbf;
   font-size: 0.8em;
 }
-/* line 28, ../scss/contents.scss */
+/* line 34, ../scss/contents.scss */
 .gamefeed .content {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* line 33, ../scss/contents.scss */
+/* line 39, ../scss/contents.scss */
 .gamefeed .content .infos {
   padding-left: 10px;
   color: #a6a7a7;
@@ -36,17 +42,17 @@
   margin-top: 5px;
 }
 
-/* line 43, ../scss/contents.scss */
+/* line 49, ../scss/contents.scss */
 .main-content {
   background: rgba(0, 0, 0, 0.8);
   padding: 15px;
   padding-top: 0px;
 }
-/* line 48, ../scss/contents.scss */
+/* line 54, ../scss/contents.scss */
 .main-content .title {
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 51, ../scss/contents.scss */
+/* line 57, ../scss/contents.scss */
 .main-content .title h4 {
   padding: 5px;
   padding-left: 15px;

@@ -33,6 +33,9 @@ View::composer('partials.menu', function($view)
 View::composer('news.index', function($view)
 {
 	$view->with('news', News::orderBy('id', 'DESC')->paginate(10));
+});
+View::composer('news.*', function($view)
+{
 	View::share('hideNewsWidget', true);
 });
 
