@@ -16,6 +16,7 @@ body
 
 header 
 {
+    background-image: rgba(0, 0, 0, 0.8);
     @include background-image(
     	linear-gradient(
     		left, 
@@ -69,6 +70,7 @@ nav ul
 
 #sidebar
 {
+    background-image: rgba(0, 0, 0, 0.8);
 	@include background-image(
     	linear-gradient(
     		left, 

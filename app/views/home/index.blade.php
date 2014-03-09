@@ -7,7 +7,7 @@
 @section('content')
 	<div class="row">
 		<div class="large-12 columns content">
-			<h2>#Deimos</h2>
+			<h2>Deimos</h2>
 			<p>
 			<b>Deimos</b> is an ambitious projet for our freshman year at <em>EPITA</em>. It is basically an old school competitive 3D FPS featuring unique gameplay mechanisms, such as a "mystery" weapon that allows to challenge other players in fun mini-games instead of a classical gun fight.
 			</p>
