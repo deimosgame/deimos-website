@@ -13,7 +13,7 @@ class RegisterController extends BaseController
 		$v = Validator::make(Input::all(), User::$rules);
 		if($v->fails())
 		{
-			return Redirect::home()
+			return Redirect::action('RegisterController@getIndex')
 				->with('message', $v->messages()->first())
 				->withInput();
 		}
