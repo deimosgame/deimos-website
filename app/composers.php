@@ -11,7 +11,7 @@ View::composer('*', function($view)
 
 View::composer('partials.news-widget', function($view)
 {
-    $view->with('news', News::orderBy('id', 'DESC')->take(2)->get());
+    $view->with('news', News::orderBy('id', 'DESC')->take(5)->get());
 });
 
 View::composer('partials.menu', function($view)
@@ -32,7 +32,7 @@ View::composer('partials.menu', function($view)
 
 View::composer('news.index', function($view)
 {
-	$view->with('news', News::orderBy('id', 'DESC')->paginate(1));
+	$view->with('news', News::orderBy('id', 'DESC')->paginate(10));
 	View::share('hideNewsWidget', true);
 });
 
