@@ -71,11 +71,12 @@
         </div>
         @endif
 
-        {{ HTML::script("bower_components/modernizr/modernizr.js", array('data-no-instant')) }}
-        {{ HTML::script("bower_components/jquery/jquery.js", array('data-no-instant')) }}
-        {{ HTML::script("bower_components/foundation/js/foundation.min.js", array('data-no-instant')) }}
-        {{ HTML::script("js/instantclick.min.js", array('data-no-instant')) }}
+        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js", array('data-no-instant')) }}
+        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", array('data-no-instant')) }}
+        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js", array('data-no-instant')) }}
+        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/instantclick/2.1.0/instantclick.min.js", array('data-no-instant')) }}
         {{ HTML::script("js/app.js") }}
+        
 		<script data-no-instant>InstantClick.init();</script>
     </body>
 </html>
