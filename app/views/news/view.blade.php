@@ -1,7 +1,7 @@
 @extends('template.default')
 
 @section('pageName')
-    Home
+    News
 @endsection
 
 @section('content')
