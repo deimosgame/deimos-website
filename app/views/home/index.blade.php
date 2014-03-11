@@ -13,10 +13,10 @@
 			</p>
 			
 			<p>
-				<ul class="clearing-thumbs" data-clearing>
-					<li><a href="images/screenshots/img1.jpg"><img src="images/screenshots/img1-th.jpg"></a></li>
-					<li><a href="images/screenshots/img2.jpg"><img src="images/screenshots/img2-th.jpg"></a></li>
-					<li><a href="images/screenshots/img3.jpg"><img src="images/screenshots/img3-th.jpg"></a></li>
+				<ul class="clearing-thumbs" align="center" data-clearing>
+					<li><a href="images/screenshots/img1.jpg" data-no-instant><img src="images/screenshots/img1-th.jpg"></a></li>
+					<li><a href="images/screenshots/img2.jpg" data-no-instant><img src="images/screenshots/img2-th.jpg"></a></li>
+					<li><a href="images/screenshots/img3.jpg" data-no-instant><img src="images/screenshots/img3-th.jpg"></a></li>
 				</ul>
 			</p>
 	

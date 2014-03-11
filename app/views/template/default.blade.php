@@ -74,7 +74,7 @@
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js", array('data-no-instant' => '')) }}
-        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation/foundation.clearing.js", array('data-no-instant' => '')) }}
+        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation/foundation.clearing.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/instantclick/2.1.0/instantclick.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("js/app.js") }}
         
