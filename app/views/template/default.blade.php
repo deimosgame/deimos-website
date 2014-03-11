@@ -36,11 +36,21 @@
             </div>
         </div>
 
-        @if(!empty($message))
+        @if(!empty($error))
         <div class="row">
             <div class="large-12 columns">
                 <div data-alert class="alert-box error">
-                    {{{ $message }}}
+                    {{{ $error }}}
+                    <a href="#" class="close">&times;</a>
+                </div>
+            </div>
+        </div>
+        @endif
+        @if(!empty($info))
+        <div class="row">
+            <div class="large-12 columns">
+                <div data-alert class="alert-box info">
+                    {{{ $info }}}
                     <a href="#" class="close">&times;</a>
                 </div>
             </div>

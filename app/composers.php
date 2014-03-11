@@ -3,9 +3,13 @@
 View::composer('*', function($view)
 {
 	// Convert the session message into a real variable
-    if(!empty(Session::get('message')))
+    if(!empty(Session::get('error')))
     {
-        return $view->with('message', Session::get('message'));
+        return $view->with('error', Session::get('error'));
+    }
+    if(!empty(Session::get('info')))
+    {
+        return $view->with('info', Session::get('info'));
     }
 });
 

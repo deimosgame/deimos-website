@@ -7,7 +7,7 @@ class LogoutController extends BaseController
 	{
 		Auth::logout();
 		return Redirect::home()
-			->with('message', 'You have successfully been logged out!');
+			->with('info', 'You have successfully been logged out!');
 	}
 
 }

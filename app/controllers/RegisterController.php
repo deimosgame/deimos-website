@@ -14,7 +14,7 @@ class RegisterController extends BaseController
 		if($v->fails())
 		{
 			return Redirect::action('RegisterController@getIndex')
-				->with('message', $v->messages()->first())
+				->with('error', $v->messages()->first())
 				->withInput();
 		}
 		$user = User::createUser(
@@ -25,7 +25,7 @@ class RegisterController extends BaseController
 	   	Auth::login($user);
 
 	   	return Redirect::home()
-	   		->with('message', 'You have successfully been registered and logged in!');
+	   		->with('info', 'You have successfully been registered and logged in!');
 	}
 
 }

@@ -17,12 +17,12 @@ class LoginController extends BaseController
 		if(!$attempt)
 		{
 			return Redirect::action('LoginController@getIndex')
-				->with('message', 'Wrong username/password. Please try again!')
+				->with('error', 'Wrong username/password. Please try again!')
 				->withInput();
 		}
 
 		return Redirect::home()
-			->with('message', 'You are now logged in!');
+			->with('info', 'You are now logged in!');
 	}
 
 }

@@ -9071,6 +9071,12 @@ input[type=submit], a.button, button {
   background: #ff0505;
   border: none;
 }
+/* line 83, ../scss/elements.scss */
+.alert-box.info {
+  background: #ffffff;
+  opacity: 0.9;
+  border: none;
+}
 
 /* line 4, ../scss/contents.scss */
 .content {

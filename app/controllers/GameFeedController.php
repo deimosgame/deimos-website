@@ -14,7 +14,7 @@ class GameFeedController extends BaseController
 		if($v->fails())
 		{
 			return Redirect::action('GameFeedController@getIndex')
-				->with('message', $v->messages()->first())
+				->with('error', $v->messages()->first())
 				->withInput();
 		}
 

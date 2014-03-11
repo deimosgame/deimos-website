@@ -79,4 +79,10 @@ input[type=submit], a.button, button
 		background: #ff0505;
 		border: none;
 	}
+    &.info
+    {
+        background: #ffffff;
+        opacity: 0.9;
+        border: none;
+    }
 }
