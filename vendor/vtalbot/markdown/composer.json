@@ -1,0 +1,25 @@
+{
+    "name": "vtalbot/markdown",
+    "description": "Markdown compiler for Laravel 4 (Illuminate)",
+    "keywords": ["laravel", "md", "markdown", "illuminate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent Talbot",
+            "email": "vincent.talbot@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "4.x",
+        "dflydev/markdown": "v1.0.3"
+    },
+    "autoload": {
+        "psr-0": {"VTalbot\\Markdown": "src/"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.4-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}

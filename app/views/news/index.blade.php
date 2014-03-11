@@ -17,7 +17,7 @@
 			            </h4>
 	    			</a>
 		        </div>
-	            <div class="large-12 columns content">
+	            <div class="large-12 columns content text-justify">
 	                {{{ $thisNews->preview }}}
 	            </div>
 	            <div class="large-12 columns content">
@@ -38,11 +38,11 @@
 		        <div class="title">
 	    			<a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}">
 			            <h4>
-			                	{{{ $thisNews->title }}}
+			                {{{ $thisNews->title }}}
 			            </h4>
 	    			</a>
 		        </div>
-	            <div class="large-12 columns content">
+	            <div class="large-12 columns content text-justify">
 	                {{{ $thisNews->preview }}}
 	            </div>
 	            <div class="large-12 columns content">

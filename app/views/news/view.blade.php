@@ -1,7 +1,7 @@
 @extends('template.default')
 
 @section('pageName')
-    Home
+    News
 @endsection
 
 @section('content')
@@ -10,8 +10,8 @@
             <h4>
                 {{{ $news->title }}}
             </h4>
-            <div class="large-12 columns content">
-                {{{ $news->content }}}
+            <div class="large-12 columns content text-justify">
+                {{ Markdown::string($news->content) }}
             </div>
             <div class="large-12 columns content">
                 <span class="right less-important">
