@@ -9,11 +9,15 @@
 		<div class="large-12 columns content">
 			<h2>Deimos</h2>
 			<p>
-			<b>Deimos</b> is an ambitious projet for our freshman year at <em>EPITA</em>. It is basically an old school competitive 3D FPS featuring unique gameplay mechanisms, such as a "mystery" weapon that allows to challenge other players in fun mini-games instead of a classical gun fight.
+			<b>Deimos</b> is an ambitious projet for our freshman year at EPITA. It is basically an old school competitive 3D FPS featuring unique gameplay mechanisms, such as a "mystery" weapon that allows to challenge other players in fun mini-games instead of a classical gun fight.
 			</p>
 			
 			<p>
-				[insert screenshots here]
+				<ul class="clearing-thumbs" data-clearing>
+					<li><a href="images/screenshots/img1.jpg"><img src="images/screenshots/img1-th.jpg"></a></li>
+					<li><a href="images/screenshots/img2.jpg"><img src="images/screenshots/img2-th.jpg"></a></li>
+					<li><a href="images/screenshots/img3.jpg"><img src="images/screenshots/img3-th.jpg"></a></li>
+				</ul>
 			</p>
 	
 			<p>
