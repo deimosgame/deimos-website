@@ -8,7 +8,7 @@
         {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300, 500, 700") }}
         {{ HTML::style("css/app.css") }}
 
-        {{ @yield('pageDescription') }}
+        @yield('pageDescription') 
     </head>
     <body>
 
