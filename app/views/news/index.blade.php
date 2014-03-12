@@ -21,6 +21,9 @@
 	                {{ Markdown::string($thisNews->preview) }}
 	            </div>
 	            <div class="large-12 columns content">
+	            	<span class="left less-important" style="font-size: 0.8em;">
+	            		<a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}"><em>Want to read more? click here!</em></a>
+	            	</span>
 	                <span class="right less-important">
 	                    {{{ $thisNews->created_at->diffForHumans() }}}
 	                </span>
@@ -46,6 +49,9 @@
 	                {{ Markdown::string($thisNews->preview) }}
 	            </div>
 	            <div class="large-12 columns content">
+	            	<span class="left less-important" style="font-size: 0.8em;">
+	            		<a href="{{ URL::action('NewsController@getView', [$thisNews->id]) }}"><em>Want to read more? click here!</em></a>
+	            	</span>
 	                <span class="right less-important">
 	                    {{{ $thisNews->created_at->diffForHumans() }}}
 	                </span>
