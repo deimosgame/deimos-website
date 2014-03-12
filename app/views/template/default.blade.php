@@ -8,7 +8,7 @@
         {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300, 500, 700") }}
         {{ HTML::style("css/app.css") }}
 
-        <meta name="description" content="Deimos is a 3D retro FPS game, created by 4 students of EPITA. Try it, you won't regret it, we promess!" />
+        {{ @yield('pageDescription') }}
     </head>
     <body>
 

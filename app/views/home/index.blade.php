@@ -1,5 +1,9 @@
 @extends('template.default')
 
+@section('pageDescription')
+	<meta name="description" content="Deimos is a 3D retro FPS game, created by 4 students of EPITA. Try it, you won't regret it, we promess!" />
+@endsection
+
 @section('pageName')
     Home
 @endsection
