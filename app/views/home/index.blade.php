@@ -18,10 +18,7 @@
 			
 			<div>
 				<ul class="clearing-thumbs small-block-grid-3" data-clearing>
-					@for ($i = 1; $i <= 3; $i++)
-						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
-					@endfor
-					@for ($i = 4; $i <= 6; $i++)
+					@for ($i = 1; $i <= 6; $i++)
 						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
 					@endfor
 				</ul>
