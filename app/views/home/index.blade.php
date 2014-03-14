@@ -22,8 +22,8 @@
 						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
 					@endfor
 					@for ($i = 4; $i <= 6; $i++)
-						<li class="hide"><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
-					@enfor
+						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
+					@endfor
 				</ul>
 				<p><em>Deimos game engine featuring an imported Half-life&reg; map with its original textures</em></p>
 			</div>
