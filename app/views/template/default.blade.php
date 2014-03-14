@@ -96,8 +96,6 @@
         {{ HTML::script("js/app.js") }}
         
 		<script data-no-instant>InstantClick.init();</script>
-		
-		<script data-no-instant>$(document).foundation();</script>
 
 		<script type="text/javascript">
 		  	var _gaq = _gaq || [];
