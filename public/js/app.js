@@ -25,6 +25,12 @@ var activityIndicatorOn = function() {
 activityIndicatorOff = function() {
 	$('#imagelightbox-loading').remove();
 },
+overlayOn = function() {
+	$('<div id="imagelightbox-overlay"></div>').appendTo('body');
+},
+overlayOff = function() {
+	$('#imagelightbox-overlay').remove();
+},
 navigationOn = function(instance, selector) {
 	var images = $(selector);
 	if (images.length) {
@@ -59,8 +65,12 @@ navigationOff = function() {
 
 var selector = 'a[data-imagelightbox]';
 var instance = $(selector).imageLightbox({
-	onStart:     function() { navigationOn(instance, selector); },
-	onEnd:       function() { navigationOff(); activityIndicatorOff(); },
+	onStart:     function() { overlayOn(); navigationOn(instance, selector); },
+	onEnd:       function() {
+		navigationOff();
+		activityIndicatorOff();
+		overlayOff();
+	},
 	onLoadStart: function() { activityIndicatorOn(); },
 	onLoadEnd:   function() {
 		navigationUpdate(selector);
