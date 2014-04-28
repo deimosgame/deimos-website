@@ -17,9 +17,9 @@
 			</p>
 			
 			<div>
-				<ul class="clearing-thumbs small-block-grid-3" data-clearing>
+				<ul>
 					@for ($i = 1; $i <= 6; $i++)
-						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
+						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-imagelightbox data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>
 					@endfor
 				</ul>
 				<p><em>Deimos game engine featuring an imported Half-life&reg; map with its original textures</em></p>

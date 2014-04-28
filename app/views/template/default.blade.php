@@ -7,6 +7,7 @@
         <title>Deimos - @yield('pageName')</title>
         {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300, 500, 700") }}
         {{ HTML::style("css/app.css") }}
+        {{ HTML::style("css/lightbox.css") }}
 
         @yield('pageDescription') 
     </head>
@@ -91,11 +92,9 @@
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js", array('data-no-instant' => '')) }}
-        {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation/foundation.clearing.min.js", array('data-no-instant' => '')) }}
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/instantclick/2.1.0/instantclick.min.js", array('data-no-instant' => '')) }}
-        {{ HTML::script("js/app.js") }}
-        
-		<script data-no-instant>InstantClick.init();</script>
+        {{ HTML::script("js/imagelightbox.min.js", array('data-no-instant' => '')) }}
+        {{ HTML::script("js/app.js", array('data-no-instant' => '')) }}
 
 		<script type="text/javascript">
 		  	var _gaq = _gaq || [];
