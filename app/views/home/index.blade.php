@@ -16,7 +16,7 @@
 				<b>Deimos</b> is our freshman year project at EPITA. It is basically an oldschool competitive 3D FPS featuring unique gameplay mechanisms, such as a "mystery" weapon that allows players to challenge others in fun and different mini-games in addition to the classical fast-paced gun fight.
 			</p>
 			
-			<div>
+			<div id="container">
 				<ul>
 					@for ($i = 1; $i <= 6; $i++)
 						<li><a href="{{ URL::to('images/screenshots/img' . $i . '.jpg') }}" data-imagelightbox data-no-instant>{{ HTML::image('images/screenshots/img' . $i . '-th.jpg') }}</a></li>

@@ -5,6 +5,17 @@ html
 	touch-action: manipulation;
 }
 
+#container ul
+{
+	list-style-type: none;
+}
+
+#container li
+{
+	display: inline-block;
+	margin: 0.1em;
+}
+
 #imagelightbox
 {
 	cursor: pointer;
@@ -26,6 +37,7 @@ html
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
+
 #imagelightbox-loading
 {
 	width: 2.5em; /* 40 */
@@ -43,6 +55,7 @@ html
 	-moz-box-shadow: 0 0 2.5em rgba( 0, 0, 0, .75 ); /* 40 */
 	box-shadow: 0 0 2.5em rgba( 0, 0, 0, .75 ); /* 40 */
 }
+
 #imagelightbox-loading div
 {
 	width: 1.25em; /* 20 */
@@ -61,18 +74,21 @@ html
 	50%	 { opacity: 1;	-webkit-transform: scale( 1 ); }
 	to	 { opacity: .5;	-webkit-transform: scale( .75 ); }
 }
+
 @-moz-keyframes imagelightbox-loading
 {
 	from { opacity: .5;	-moz-transform: scale( .75 ); }
 	50%	 { opacity: 1;	-moz-transform: scale( 1 ); }
 	to	 { opacity: .5;	-moz-transform: scale( .75 ); }
 }
+
 @-o-keyframes imagelightbox-loading
 {
 	from { opacity: .5;	-o-transform: scale( .75 ); }
 	50%	 { opacity: 1;	-o-transform: scale( 1 ); }
 	to	 { opacity: .5;	-o-transform: scale( .75 ); }
 }
+
 @keyframes imagelightbox-loading
 {
 	from { opacity: .5;	transform: scale( .75 ); }
@@ -100,6 +116,7 @@ html
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 }
+
 #imagelightbox-nav a
 {
 	width: 1em; /* 20 */
@@ -112,6 +129,7 @@ html
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
+
 #imagelightbox-nav a.active
 {
 	background-color: #fff;
@@ -128,26 +146,30 @@ html
 	-o-animation: fade-in .25s linear;
 	animation: fade-in .25s linear;
 }
-	@-webkit-keyframes fade-in
-	{
-		from	{ opacity: 0; }
-		to		{ opacity: 1; }
-	}
-	@-moz-keyframes fade-in
-	{
-		from	{ opacity: 0; }
-		to		{ opacity: 1; }
-	}
-	@-o-keyframes fade-in
-	{
-		from	{ opacity: 0; }
-		to		{ opacity: 1; }
-	}
-	@keyframes fade-in
-	{
-		from	{ opacity: 0; }
-		to		{ opacity: 1; }
-	}
+
+@-webkit-keyframes fade-in
+{
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
+
+@-moz-keyframes fade-in
+{
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
+
+@-o-keyframes fade-in
+{
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
+
+@keyframes fade-in
+{
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
 
 @media only screen and (max-width: 41.250em) /* 660 */
 {
