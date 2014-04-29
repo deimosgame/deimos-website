@@ -44,6 +44,9 @@ class APIController extends BaseController
 			]);
 		}
 
+		$thisUser->api_token = null;
+		$thisUser->save();
+
 		return Response::json([
 			'success' => true
 		]);
