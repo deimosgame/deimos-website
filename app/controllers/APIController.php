@@ -10,10 +10,10 @@ class APIController extends BaseController
 
 	}
 
-	public function getGetToken($username, $password)
+	public function getGetToken($email, $password)
 	{
 
-		if(Auth::once(['username' => $username, 'password' => $password]))
+		if(Auth::once(['email' => $email, 'password' => $password]))
 		{
 			Auth::user()->api_token = md5(uniqid());
 			Auth::user()->save();
