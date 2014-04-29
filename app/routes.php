@@ -23,3 +23,5 @@ Route::controller('/register', 'RegisterController');
 Route::controller('/news', 'NewsController');
 Route::controller('/gamefeed', 'GameFeedController');
 Route::controller('/user/profile', 'UserController');
+
+Route::controller('/api', 'APIController');
