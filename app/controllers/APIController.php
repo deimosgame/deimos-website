@@ -31,10 +31,11 @@ class APIController extends BaseController
 
 	}
 
-	public function getValidateToken($token)
+	public function getValidateToken($email, $token)
 	{
 
-		$thisUser = User::where('api_token', '=', $token)->first();
+		$thisUser = User::where('api_token', '=', $token)
+			->where('email', '=', $email)->first();
 
 		if(empty($thisUser))
 		{
