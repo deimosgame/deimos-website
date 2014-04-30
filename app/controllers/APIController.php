@@ -52,5 +52,19 @@ class APIController extends BaseController
 		]);
 
 	}
+	
+	public function getGetName($email) {
+		$thisUser = User::where('email', '=', $email)->first();
+		if (empty($thisUser)) {
+			return Response::json([
+				'success' => false,
+				'name'    => null
+			]);
+		}
+		return Response::json([
+			'success' => true,
+			'name' => $thisUser->username
+		]);
+	}
 
 }
