@@ -67,9 +67,12 @@
 		@if(!isset($hideNewsWidget))
         <div class="row wrapper">
             <div class="large-8 columns">
+            	@if (array_key_exists('content', View::getSections()))
                 <div class="main-content">
                     @yield('content')
                 </div>
+                @endif
+                @yield('content-outside')
             </div>
             <div class="large-4 columns">
                 @include('partials.news-widget')
@@ -78,9 +81,12 @@
         @else
 		<div class="row wrapper">
             <div class="large-12 columns">
+            	@if (array_key_exists('content', View::getSections()))
                 <div class="main-content">
                     @yield('content')
                 </div>
+                @endif
+                @yield('content-outside')
             </div>
         </div>
         @endif

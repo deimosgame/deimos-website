@@ -89,6 +89,8 @@ Route::when('register/*', 'guest');
 Route::when('gamefeed/submit', 'auth');
 Route::when('gamefeed/submit/*', 'auth');
 
+Route::when('user*', 'auth');
+
 Route::when('login/*', 'csrf', array('post'));
 Route::when('logout', 'csrf');
 Route::when('logout/*', 'csrf');
