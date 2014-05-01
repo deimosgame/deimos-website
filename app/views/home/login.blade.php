@@ -12,7 +12,7 @@
             <h4>Login</h4>
         </div>
         <div class="large-8 columns">
-            {{ Form::text('username', null, array('class' => 'large-12 columns', 'placeholder' => 'Username')) }}
+            {{ Form::text('email', null, array('class' => 'large-12 columns', 'placeholder' => 'Email')) }}
             <br /><br /><br />
             {{ Form::password('password', array('class' => 'large-12 columns', 'placeholder' => 'Password')) }}
         </div>

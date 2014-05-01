@@ -11,13 +11,13 @@ class LoginController extends BaseController
 	public function postSubmit()
 	{
 		$attempt = Auth::attempt([
-			'username' => Input::get('username'),
+			'email' => Input::get('email'),
 			'password' => Input::get('password')
 		], true);
 		if(!$attempt)
 		{
 			return Redirect::action('LoginController@getIndex')
-				->with('error', 'Wrong username/password. Please try again!')
+				->with('error', 'Wrong email/password. Please try again!')
 				->withInput();
 		}
 
