@@ -92,7 +92,7 @@
         @endif
 
         <footer>
-        	
+        	<span>Deimos</span> - The game
         </footer>
 
         {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js", array('data-no-instant' => '')) }}
