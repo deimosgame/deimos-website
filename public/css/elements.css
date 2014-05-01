@@ -7851,3 +7851,12 @@ input[type=submit], a.button, button {
   opacity: 0.9;
   border: none;
 }
+
+/* line 91, ../scss/elements.scss */
+img.image-hover {
+  opacity: 0.6;
+}
+/* line 95, ../scss/elements.scss */
+img.image-hover:hover {
+  opacity: 1;
+}

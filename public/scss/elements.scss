@@ -86,3 +86,13 @@ input[type=submit], a.button, button
         border: none;
     }
 }
+
+img.image-hover
+{
+    opacity: 0.6;
+
+    &:hover
+    {
+        opacity: 1;
+    }
+}

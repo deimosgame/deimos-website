@@ -9105,6 +9105,15 @@ input[type=submit], a.button, button {
   border: none;
 }
 
+/* line 91, ../scss/elements.scss */
+img.image-hover {
+  opacity: 0.6;
+}
+/* line 95, ../scss/elements.scss */
+img.image-hover:hover {
+  opacity: 1;
+}
+
 /* line 4, ../scss/contents.scss */
 .content {
   color: #d5d5d5;
