@@ -13,20 +13,51 @@ class APIController extends BaseController
 	public function getGetToken($email, $password)
 	{
 
-		if(Auth::once(['email' => $email, 'password' => $password]))
+		if(!Auth::once(['email' => $email, 'password' => $password]))
 		{
-			Auth::user()->api_token = md5(uniqid());
-			Auth::user()->save();
-
 			return Response::json([
-				'success' => true,
-				'token' => Auth::user()->api_token
+				'success'       => false,
+				'token'         => null,
+				'refresh-token' => null
+			]);
+		}
+		
+		Auth::user()->api_token         = md5(uniqid());
+		Auth::user()->api_refresh_token = md5(uniqid());
+		Auth::user()->save();
+
+		return Response::json([
+			'success'       => true,
+			'token'         => Auth::user()->api_token,
+			'refresh-token' => Auth::user()->api_refresh_token
+		]);
+
+	}
+
+	public function getRefreshToken($email, $refreshToken)
+	{
+
+		$thisUser = User::where('email', '=', $email)
+			->where('api_refresh_token', '=', $refreshToken)
+			->first();
+
+		if(empty($thisUser))
+		{
+			return Response::json([
+				'success'       => false,
+				'token'         => null,
+				'refresh-token' => null
 			]);
 		}
 
+		$thisUser->api_token = md5(uniqid());
+		$thisUser->api_refresh_token = md5(uniqid());
+		$thisUser->save();
+
 		return Response::json([
-			'success' => false,
-			'token' => null
+			'success'       => true,
+			'token'         => $thisUser->api_token,
+			'refresh-token' => $thisUser->api_refresh_token
 		]);
 
 	}
@@ -55,7 +86,8 @@ class APIController extends BaseController
 	
 	public function getGetName($email) {
 		$thisUser = User::where('email', '=', $email)->first();
-		if (empty($thisUser)) {
+		if (empty($thisUser)) 
+		{
 			return Response::json([
 				'success' => false,
 				'name'    => null
@@ -63,7 +95,7 @@ class APIController extends BaseController
 		}
 		return Response::json([
 			'success' => true,
-			'name' => $thisUser->username
+			'name'    => $thisUser->username
 		]);
 	}
 
