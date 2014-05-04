@@ -45,19 +45,16 @@ class APIController extends BaseController
 		{
 			return Response::json([
 				'success'       => false,
-				'token'         => null,
-				'refresh-token' => null
+				'token'         => null
 			]);
 		}
 
 		$thisUser->api_token = md5(uniqid());
-		$thisUser->api_refresh_token = md5(uniqid());
 		$thisUser->save();
 
 		return Response::json([
 			'success'       => true,
-			'token'         => $thisUser->api_token,
-			'refresh-token' => $thisUser->api_refresh_token
+			'token'         => $thisUser->api_token
 		]);
 
 	}
