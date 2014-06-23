@@ -9114,6 +9114,11 @@ img.image-hover:hover {
   opacity: 1;
 }
 
+/* line 101, ../scss/elements.scss */
+p {
+  color: #CFCFCF;
+}
+
 /* line 4, ../scss/contents.scss */
 .content {
   color: #d5d5d5;

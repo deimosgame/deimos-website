@@ -7,6 +7,7 @@
         <title>Deimos - @yield('pageName')</title>
         {{ HTML::style("//fonts.googleapis.com/css?family=Lato:300, 500, 700") }}
         {{ HTML::style("css/app.css") }}
+        {{ HTML::style("css/font-awesome.min.css") }}
         {{ HTML::style("css/lightbox.css") }}
 
         @yield('pageDescription') 

@@ -6,7 +6,7 @@ class APIController extends BaseController
 	public function getIndex()
 	{
 
-
+		return Response::json(['version' => '1.0.0.0']);
 
 	}
 
@@ -81,7 +81,8 @@ class APIController extends BaseController
 
 	}
 	
-	public function getGetName($email) {
+	public function getGetName($email) 
+	{
 		$thisUser = User::where('email', '=', $email)->first();
 		if (empty($thisUser)) 
 		{
@@ -93,6 +94,58 @@ class APIController extends BaseController
 		return Response::json([
 			'success' => true,
 			'name'    => $thisUser->username
+		]);
+	}
+
+
+
+	public function getUnlockAchievements($email, $successId)
+	{
+		$achievement = Achievement::find($successId);
+		if(empty($achievement))
+		{
+			return Response::json([
+				'success' => false,
+				'message' => 'Achievement not found'
+			]);
+		}
+
+		$user = User::where('email', '=', $email)->first();
+		if(empty($user))
+		{
+			return Response::json([
+				'success' => false,
+				'message' => 'User not found'
+			]);
+		}
+
+		$unlocked = UserAchievement::where('user_id', '=', $user->id)
+			->where('achievement_id', '=', $successId)->first();
+
+		if(!empty($unlocked))
+		{
+			return Response::json([
+				'success' => false,
+				'message' => 'Achievement already unlocked'
+			]);
+		}
+
+		// All good here
+		$newFeed                 = new GameFeed;
+		$newFeed->user_id        = $user->id;
+		$newFeed->achievement_id = $successId;
+		$newFeed->content        = 'Unlocked the achievement "' . $achievement->name . '"';
+		$newFeed->save();
+
+		$newAch = new UserAchievement;
+		$newAch->user_id = $user->id;
+		$newAch->achievement_id = $achievement->id;
+		$newAch->save();
+
+
+		return Response::json([
+			'success' => true,
+			'message' => $achievement->name
 		]);
 	}
 
