@@ -149,4 +149,29 @@ class APIController extends BaseController
 		]);
 	}
 
+	public function getUnlockedAchievements($email)
+	{
+		$user = User::where('email', '=', $email)->first();
+		if(empty($user))
+		{
+			return Response::json([
+				'success' => false,
+				'list' => array()
+			]);
+		}
+
+		$unlocked = UserAchievement::where('user_id', '=', $user->id)->get();
+
+		$finalArray = array();
+		foreach ($unlocked as $ach) 
+		{
+			$finalArray[] = $ach->id;
+		}
+
+		return Response::json([
+			'success' => true,
+			'list' => $finalArray
+		]);
+	}
+
 }
