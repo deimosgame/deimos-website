@@ -29,7 +29,7 @@
                     <tr>
                         <th width="15"><span>Name</span></th>
                         <th><span>Description</span></th>
-                        <th><span>Date</span></th>
+                        <th style="width: 180px;"><span>Date</span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +41,7 @@
                 	@foreach($achievements as $achievement)
                     <tr>
                         <td>{{{ $achievement->name }}}</td>
-                        <td>{{{ $achievement->description}}}</td>
+                        <td>{{{ $achievement->description }}}</td>
                         <td>{{{ $achievement->created_at->diffForHumans() }}}</td>
                     </tr>
                     @endforeach

@@ -83,7 +83,7 @@ View::composer('user.achievements', function($view)
 	}
 	$achievements = UserAchievement::where('user_achievements.user_id', '=', (int)Input::get('user'))
 		->join('achievements', 'achievements.id', '=', 'user_achievements.achievement_id')
-		->select('achievements.id', 'achievements.name', 'achievements.description')
+		->select('achievements.id', 'achievements.name', 'achievements.description', 'achievements.created_at')
 		->get();
 	$view->with('achievements', $achievements);
 	$view->with('user', $user);
