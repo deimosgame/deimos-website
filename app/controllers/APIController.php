@@ -165,7 +165,7 @@ class APIController extends BaseController
 		$finalArray = array();
 		foreach ($unlocked as $ach) 
 		{
-			$finalArray[] = $ach->id;
+			$finalArray[] = (int)$ach->id;
 		}
 
 		return Response::json([
