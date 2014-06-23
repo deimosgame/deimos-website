@@ -52,6 +52,7 @@ App::error(function(Exception $exception, $code)
 	if(Config::get('app.debug'))
 	{
 		Log::error($exception);
+		return;
 	}
     switch ($code)
     {

@@ -1,5 +1,5 @@
 <?php
 
 class Achievement extends Eloquent {
-	protected $table = 'achivements';
+	protected $table = 'achievements';
 }
