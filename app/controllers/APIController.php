@@ -160,12 +160,12 @@ class APIController extends BaseController
 			]);
 		}
 
-		$unlocked = UserAchievement::where('user_id', '=', $user->achievement_id)->get();
+		$unlocked = UserAchievement::where('user_id', '=', $user->id)->get();
 
 		$finalArray = array();
 		foreach ($unlocked as $ach) 
 		{
-			$finalArray[] = (int)$ach->id;
+			$finalArray[] = (int)$ach->achievement_id;
 		}
 
 		return Response::json([
